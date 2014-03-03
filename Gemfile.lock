@@ -127,6 +127,9 @@ GEM
     fastercsv (1.5.5)
     ffi (1.9.3)
     formatador (0.2.4)
+    foundation-rails (5.1.1.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     guard (2.5.0)
       formatador (>= 0.2.4)
       listen (~> 2.6)
@@ -165,6 +168,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     marco-polo (1.1.0)
+    masonry-rails (0.2.1)
+      rails
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.2)
@@ -310,6 +315,7 @@ DEPENDENCIES
   dotenv-rails
   exception_notification
   factory_girl_rails
+  foundation-rails
   guard (>= 2.2.2)
   guard-livereload
   guard-rspec
@@ -317,6 +323,7 @@ DEPENDENCIES
   launchy
   letter_opener
   marco-polo (~> 1.0)
+  masonry-rails
   normalize-rails (~> 3.0.0)
   pg
   postmark-rails

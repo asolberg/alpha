@@ -17,6 +17,8 @@ gem 'sass-rails',        '~> 4.0.0'
 gem 'secure_headers'
 gem 'turbolinks'
 gem 'uglifier',          '>= 1.3.0'
+gem 'foundation-rails'
+gem 'masonry-rails'
 
 # Other gems to consider
 # gem 'activeadmin', '0.6.0' # `rails g active_admin:assets` when upgrading

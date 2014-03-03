@@ -1,9 +1,60 @@
-<%# The "application" layout is the default layout. It extends "base"  %>
-<%# to include things like header, footer, and alerts that are common  %>
-<%# to most (but not all) views.                                       %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= render("shared/alerts") %>
+    <title><%= content_for?(:title) ? yield(:title) : "Pedalr" %></title>
 
-<%= yield %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<% parent_layout "base" %>
+  <body>
+  <div class="contain-to-grid fixed">
+    <div class="border">
+    <nav class="top-bar docs-bar hide-for-small" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <img id="logo" src="/assets/logo.png" id="home">
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <a href="#" id="bikes">Bikes</a>
+        </li>
+        <li>
+          <a href="#" id="parts">Parts</a>
+        </li>
+        <li>
+          <a href="#" id="clothes">Clothes</a>
+        </li>
+        <li>
+          <a href="#" id="accessories">Accessories</a>
+        </li>
+        <li>
+          <a href="#" id="market">Market</a>
+        </li>
+        <li class="has-form">
+          <a href="#" class="small button" id="join">Join</a>
+        </li>
+      </ul>
+    </section>
+    </nav>
+    <nav class="tab-bar show-for-small">
+      <a class="left-off-canvas-toggle menu-icon">
+        <span>Pedalr</span>
+      </a>
+    </nav>
+</div>
+  </div>
+<div class="spacer"></div>
+  <%= yield :body %>
+
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

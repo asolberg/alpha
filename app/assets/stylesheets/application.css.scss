@@ -1,4 +1,230 @@
 //= require normalize-rails
 //= require ./base
 //= require ./layout
+//= require 'masonry/basic'
+//= require 'masonry/centered'
+//= require 'masonry/fluid'
+//= require 'masonry/gutters'
+//= require 'masonry/infinitescroll'
+//= require 'masonry/right-to-left'
+//= require 'masonry/transitions'
 //= require_tree ./modules
+
+/* Background color for the top bar */
+$topbar-bg: #f6f6f6;
+
+
+
+
+/* Set the link colors and styles for top-level nav */
+$topbar-link-color: #000;
+$topbar-link-color-hover: #000000;
+$topbar-link-color-active: #000000;
+$topbar-link-color-active-hover: #000000;
+$topbar-link-weight: normal;
+$topbar-link-font-size: rem-calc(13);
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg-hover: white  ;
+$topbar-link-bg-active: #ffffff;
+$topbar-link-bg-active-hover: #ffffff;
+
+
+$topbar-dropdown-label-color: #555;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: bold;
+$topbar-dropdown-label-font-size: rem-calc(10);
+/* Style the top bar dropdown elements */
+$topbar-dropdown-bg: #000;
+$topbar-dropdown-link-color: #000;
+$topbar-dropdown-link-bg: #99CBFE;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #000;//fixme
+$topbar-dropdown-toggle-alpha: 0.5;
+$topbar-dropdown-link-bg-hover: black  ;
+
+@import "foundation_and_overrides";
+.top-bar-section ul.dropdown {
+  background-color: #000000 !important;
+}
+.top-bar-section ul.dropdown li{
+  background-color: #000000 !important;
+}
+
+
+
+
+#wrapper
+{
+  background-color: #f6f6f6;
+  width: 1024px;
+  margin: 0 auto;
+  height:500px;
+}
+#list
+{
+  width: 103.125%; /* 990px */
+  overflow: hidden;
+  margin-left: -1.562%; /* 15px */
+  margin-bottom: -1.875em; /* 30px */
+}
+.item
+{
+  /*width: 22%;  300px */
+  float: left;
+  margin: 0 1.0% 1.2em; /* 15px 30px */
+}
+
+@media only screen and ( max-width: 40em ) /* 640px */
+{
+  .item
+  {
+    /*width: 20%;  305px */
+    margin-bottom: 0.938em; /* 15px */
+  }
+}
+@media only screen and ( max-width: 20em ) /* 640px */
+{
+  #list
+  {
+    width: 100%;
+    margin-left: 0;
+  }
+  .item
+  {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.th img{
+  margin-top:5px;
+  margin-bottom:15px;
+}
+
+div.item{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+div.item p{
+  font-size: 24px;
+  font-family: "freight-text-pro","Times New Roman","Lucida Sans Unicode","Lucida Grande",sans-serif;
+  font-style: italic;
+}
+
+ul.dropdown{
+  font-size:14px;
+
+}
+ul.dropdown li{
+
+position:relative;
+top:10px;
+  border-right:1px solid black;
+  border-left:1px solid black;
+}
+ul.dropdown li:last-child{
+
+
+  border-bottom:1px solid black;
+}
+ul.right{
+
+//  border-bottom: 1px solid black;
+}
+
+div.border{
+  border-bottom: 0px solid black;
+//  padding-bottom:15px;
+//  padding-top:10px;
+
+}
+
+.th:hover, .th:focus {
+  -webkit-box-shadow: 0 0 0px 3px rgba(51, 153, 255, 0.5);
+  box-shadow: 0 0 0px 3px rgba(51, 153, 255, 0.5);
+}
+
+.top-bar-section ul li > a.button {
+  background: #99CBFE;
+
+}
+
+.top-bar-section li:not(.has-form) ul.dropdown a:not(.button):hover {
+  background: #99CBFE;
+}
+
+div.homelinks a{
+  background-color: #000000;
+  color: #ffffff;
+}
+
+div.homelinks a:hover{
+    background-color: #fad935;
+    color: #000000;
+}
+
+body{
+  background-color: #fff;
+}
+
+div.wrapper div.row div{
+   /* border:0px solid black;*/
+
+}
+
+div.brownbox{
+  background-color: #e3dfcd;
+  width:100%;
+  height:307px;
+  padding:10px;
+}
+div.relative{
+  position:relative;
+}
+div.tag{
+  width:150px;
+  height: 50px;
+  background-color:black;
+  position: absolute;
+  bottom: 50px;
+  right:0.9375rem;
+}
+
+div.spacer{
+  height:100px;
+}
+
+img#logo{
+  margin-top:5px;
+  margin-bottom:15px;
+}
+
+img#logo:hover{
+  cursor: pointer;
+}
+
+div.buytag{
+  position:absolute;
+  bottom:25px;
+  right:0px;
+  display:none;
+}
+
+div.itemwrapper{
+  padding:5px 5px 20px 5px;
+  border:1px dotted grey;
+}
+
+div.template {
+  display: none;
+}
+
+div#current_template{
+  display:block;
+}
+
+div.columns{
+  margin-top:20px;
+}

@@ -4,3 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   ensure_security_headers
 end
+
+class Catalog < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+  ensure_security_headers
+end

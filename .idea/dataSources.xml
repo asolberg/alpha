@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3527403966">
+    <data-source source="LOCAL" name="Rails 55minutes-rails-starter-1831d3b: development" uuid="741ed792-8aa7-4657-b221-cee739e2e155">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:pedalr_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails 55minutes-rails-starter-1831d3b: test" uuid="8e7063de-8dac-4c3c-9934-540140dfc8c5">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:pedalr_test</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
