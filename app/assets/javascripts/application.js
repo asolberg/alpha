@@ -48,61 +48,88 @@ var renderTemplate = function (template_name){
 
 }
 
-$('#bikes').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-bikes');
-    $(this).parent().siblings().removeClass("active");
-    $(this).parent('li').addClass("active");
-});
 
-$('#parts').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-parts');
-    $(this).parent().siblings().removeClass("active");
-    $(this).parent('li').addClass("active");
-});
 
-$('#clothes').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-clothes');
-    $(this).parent().siblings().removeClass("active");
-    $(this).parent('li').addClass("active");
-});
 
-$('#accessories').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-accessories');
-    $(this).parent().siblings().removeClass("active");
-    $(this).parent('li').addClass("active");
-});
-
-$('#market').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-market');
-    $(this).parent().siblings().removeClass("active");
-    $(this).parent('li').addClass("active");
-});
-
-$('#logo').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-home');
-    $('li').removeClass("active");
-});
-
-$('#join').click(function(event){
-    event.preventDefault();
-    renderTemplate('template-join');
-    $('li').removeClass("active");
-});
-
-$.fx.speeds._default = 9000;
-
-$('div.columns').on('mouseover', function(){
+$('div.itemwrapper').on('mouseenter', function(){
     $(this).find('.buytag').show();
 })
 
-$('div.columns').on('mouseout', function(){
+$('div.itemwrapper').on('mouseleave', function(){
     $(this).find('.buytag').hide();
     $(this).find('.f-dropdown').removeClass('open').css('left', '-99999px');
 })
 
+$('.shoptag').on('mouseenter', function(){
+    $(this).addClass('inverse');
+})
+
+$('.shoptag').on('mouseleave', function(){
+    $(this).removeClass('inverse');
+})
+
+$(document).ready(function(){
+
+    $('.f-dropdown a').click(function(event){
+        event.preventDefault();
+    })
+
+    $('.shoptag').show();
+
+    $('.link-bikes').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-bikes');
+        $('.active').removeClass('active');
+        $('.link-bikes').parent('li').addClass("active");
+//        $(this).parent().siblings().removeClass("active");
+//        $(this).parent('li').addClass("active");
+    });
+
+    $('.link-parts').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-parts');
+        $('.active').removeClass('active');
+        $('.link-parts').parent('li').addClass("active");
+//        $(this).parent().siblings().removeClass("active");
+//        $(this).parent('li').addClass("active");
+    });
+
+    $('.link-clothes').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-clothes');
+        $('.active').removeClass('active');
+        $('.link-clothes').parent('li').addClass("active");
+//        $(this).parent().siblings().removeClass("active");
+//        $(this).parent('li').addClass("active");
+    });
+
+    $('.link-accessories').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-accessories');
+        $('.active').removeClass('active');
+        $('.link-accessories').parent('li').addClass("active");
+//        $(this).parent().siblings().removeClass("active");
+//        $(this).parent('li').addClass("active");
+    });
+
+    $('.link-market').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-market');
+        $('.active').removeClass('active');
+        $('.link-market').parent('li').addClass("active");
+//        $(this).parent().siblings().removeClass("active");
+//        $(this).parent('li').addClass("active");
+    });
+
+    $('.link-logo').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-home');
+        $('li').removeClass("active");
+    });
+
+    $('.link-join').click(function(event){
+        event.preventDefault();
+        renderTemplate('template-join');
+        $('li').removeClass("active");
+    });
+})
